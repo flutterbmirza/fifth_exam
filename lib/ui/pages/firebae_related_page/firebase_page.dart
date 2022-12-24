@@ -67,7 +67,6 @@ class _StudentsPageState extends State<StudentsPage> {
             Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                borderRadius: BorderRadius.circular(15.r),
                 image: DecorationImage(
                   image: NetworkImage(model.imageUrl),
                   fit: BoxFit.cover,
@@ -84,6 +83,7 @@ class _StudentsPageState extends State<StudentsPage> {
                 style: const TextStyle(color: Colors.black),
               ),
             ),
+            Spacer(),
             InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => UpdateStudentPage(studentsModel: model)));
